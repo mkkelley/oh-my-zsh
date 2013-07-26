@@ -38,7 +38,6 @@ ZSH_THEME_GIT_PROMPT_ADDED=" %{$GREEN%}+"
 ZSH_THEME_GIT_PROMPT_UNTRACKED=" %{$WHITE%}untracked"
 
 # Format for git_prompt_ahead()
-<<<<<<< HEAD
 ZSH_THEME_GIT_PROMPT_AHEAD=" %{$RED%}↑"
 
 # Format for git_prompt_long_sha() and git_prompt_short_sha()
