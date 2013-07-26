@@ -34,8 +34,8 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED=" %{$WHITE%}untracked"
 ZSH_THEME_GIT_PROMPT_AHEAD=" %{$RED%}↑"
 
 # Format for git_prompt_long_sha() and git_prompt_short_sha()
-ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %{$WHITE%}[%{$YELLOW%}"
-ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$WHITE%}]"
+ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %b%{$WHITE%}[%{$YELLOW%}"
+ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$WHITE%}]%B"
 
 # Prompt format
 PROMPT='%{$CYAN%}[%~%u]%(?.%{$fg[green]%}.%{$fg[red]%})%B\$%b '
