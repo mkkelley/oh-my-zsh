@@ -21,7 +21,6 @@ if [[ $EUID -eq 0 ]]; then
     PMT="#"
 fi
 
-
 # Format for git_prompt_info()
 ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
@@ -39,6 +38,7 @@ ZSH_THEME_GIT_PROMPT_ADDED=" %{$GREEN%}+"
 ZSH_THEME_GIT_PROMPT_UNTRACKED=" %{$WHITE%}untracked"
 
 # Format for git_prompt_ahead()
+<<<<<<< HEAD
 ZSH_THEME_GIT_PROMPT_AHEAD=" %{$RED%}↑"
 
 # Format for git_prompt_long_sha() and git_prompt_short_sha()
