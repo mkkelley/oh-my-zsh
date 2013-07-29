@@ -1,3 +1,12 @@
+#edited for root goodness
+COLOR_DIR=$fg[cyan]
+CHAR_P="$"
+
+if [[ $EUID -eq 0 ]]; then
+    COLOR_DIR=$fg[red]
+    CHAR_P="#"
+fi
+
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg[green]%}["
 ZSH_THEME_GIT_PROMPT_SUFFIX="]%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}*%{$reset_color%}"
@@ -26,4 +35,4 @@ else
   fi
 fi
 
-PROMPT='%{$fg[cyan]%}[%~% ]%(?.%{$fg[green]%}.%{$fg[red]%})%B$%b '
+PROMPT='%{$COLOR_DIR%}[%~% ]%(?.%{$fg[green]%}.%{$fg[red]%})%B$CHAR_P%b '
