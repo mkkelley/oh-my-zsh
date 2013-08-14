@@ -51,5 +51,5 @@ if [ -n "$SSH_CLIENT" ]; then
 fi
 
 # Prompt format
-PROMPT='%{$PR_COLOR%}[$SSH%~%u]%(?.%{$fg[green]%}.%{$fg[red]%})%B$PMT%b '
-RPROMPT='$(parse_git_dirty)%{$GREEN_BOLD%}$(current_branch)$(git_prompt_short_sha)$(git_prompt_status)%{$RESET_COLOR%}'
+PROMPT='%{$CYAN%}[%~%u]%(?.%{$fg[green]%}.%{$fg[red]%})%B\$%b '
+RPROMPT='$(parse_git_dirty)%{$GREEN_BOLD%}$(current_branch)$(git_prompt_short_sha)$(git_prompt_ahead)$(git_prompt_status)%{$RESET_COLOR%}'
