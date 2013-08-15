@@ -37,6 +37,12 @@ ZSH_THEME_GIT_PROMPT_AHEAD=" %{$RED%}↑"
 ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %b%{$WHITE%}[%{$YELLOW%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$WHITE%}]%B"
 
+# Prompt if ssh'd into another machine.
+SSH=""
+if [ -n "$SSH_CLIENT" ]; then
+    SSH='%n@%m:'
+fi
+
 # Prompt format
-PROMPT='%{$CYAN%}[%~%u]%(?.%{$fg[green]%}.%{$fg[red]%})%B\$%b '
+PROMPT='%{$CYAN%}[$SSH%~%u]%(?.%{$fg[green]%}.%{$fg[red]%})%B\$%b '
 RPROMPT='$(parse_git_dirty)%{$GREEN_BOLD%}$(current_branch)$(git_prompt_short_sha)$(git_prompt_status)%{$RESET_COLOR%}'
