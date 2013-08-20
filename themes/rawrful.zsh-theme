@@ -48,7 +48,7 @@ ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$WHITE%}]%B"
 # Prompt if ssh'd into another machine.
 SSH=""
 if [ -n "$SSH_CLIENT" ]; then
-    SSH='%n@%m:'
+    SSH="%n@%{$WHITE%}%B%m%b%{$PR_COLOR%}:"
 fi
 
 # Prompt format
