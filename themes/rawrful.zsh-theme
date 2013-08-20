@@ -14,6 +14,14 @@ BLUE_BOLD=$fg_bold[blue]
 CYAN_BOLD=$fg_bold[cyan]
 RESET_COLOR=$reset_color
 
+PR_COLOR=$CYAN
+PMT="\$"
+if [[ $EUID -eq 0 ]]; then
+    PR_COLOR=$RED
+    PMT="#"
+fi
+
+
 # Format for git_prompt_info()
 ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
@@ -44,5 +52,5 @@ if [ -n "$SSH_CLIENT" ]; then
 fi
 
 # Prompt format
-PROMPT='%{$CYAN%}[$SSH%~%u]%(?.%{$fg[green]%}.%{$fg[red]%})%B\$%b '
+PROMPT='%{$PR_COLOR%}[$SSH%~%u]%(?.%{$fg[green]%}.%{$fg[red]%})%B$PMT%b '
 RPROMPT='$(parse_git_dirty)%{$GREEN_BOLD%}$(current_branch)$(git_prompt_short_sha)$(git_prompt_status)%{$RESET_COLOR%}'
